@@ -16,6 +16,7 @@ beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
+browser = "firefox"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -54,9 +55,10 @@ end
 -- }}}
 
 -- {{{ Menu
--- Create a laucher widget and a main menu
+-- Create a launcher widget and a main menu
 myawesomemenu = {
    { "manual", terminal .. " -e man awesome" },
+   { "awful manual", browser .. " /usr/share/doc/awesome/luadoc/index.html" },
    { "edit config", editor_cmd .. " " .. awful.util.getdir("config") .. "/rc.lua" },
    { "restart", awesome.restart },
    { "quit", awesome.quit }
@@ -68,7 +70,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
+mylauncher = awful.widget.launcher({ image = image("/usr/share/icons/gnome/32x32/places/debian-swirl.png"),
                                      menu = mymainmenu })
 -- }}}
 
