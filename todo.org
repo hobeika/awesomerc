@@ -1,2 +1,46 @@
+* TODO [#A] list needed features
+** DONE [#B] move client around tags
+   CLOSED: [2013-01-10 jeu. 19:11]
+** TODO [#B] tile client to left or right (the client takes half the surface of
+    the screen and is glued to the left or the right of the screen)
+** TODO [#B] maximize a client and unmaximize the client to its previous size
+    (do I really need unmaximize?)
+** TODO [#B] have a 2D layout:
+    | 1 | 2 | 3 |
+    | 4 | 5 | 6 |
+   - This can be mimicked by have a mod4 + down and mod4 + up which
+     move to 3 tags right and 3 tags left.
+** TODO [#B] have named tag associated to context: dev, web, chat, mail,
+    compilation, sandbox
+    | dev  | compilation | web  |
+    | mail | sandbox     | chat |
+** TODO [#B] have a goto named tag: goto dev (could this behave like the
+    promptbox?), Do I want to type the name of my tag (or an
+    acronym) or only bind each tag moveto action on a key for each
+    of them.
+** TODO [#C] ps aux widget. I often open a terminal and type ps aux | grep
+    mybugged_program_name. It may be cool to have a promptbox like
+    widget to do this and display it on the desktop with maybe a
+    time-life of 10 seconds or have the ability to close the ps widget
+    with one key like Q and mimic less, more and most behavior.
+** TODO [#B] do I want clients to go over the clock or not?
+** TODO [#B] two clocks (UTC and CET) with different colors (maybe orange and
+    standard grey respectively)
+** TODO [#B] automatically add my dev emacs to the dev tag. automatically
+    add my chatty emacs to the chatty tag. Is this even possible?
+    Find a way to differentiate them
+** TODO [#B] have a bind to display the name of the song currently playing in
+    the launcher for instance.
+** TODO [#C] have a way to display all my clients on the same tag but as
+    - thumbs and filter the view them by typing letters found in the
+      client names. Select on client among the displayed one maybe
+      with the help of arrows. Have one of the clients highlighted
+      (use client.focus?)
+    - I may be able to do this with the shifty library. I tag all my
+      clients with a tag map and move to this new tag. Then focus in a
+      promptbox and filter by typing letters. Update the map tag
+      whenever I strike key. One problem remain: create thumbs. or
+      maybe I could simply tile all the client on that specific map
+      tag.
 * TODO [#B] find out why my .xsession is not processed correctly
   I want setxkbmap fr bepo at startup
