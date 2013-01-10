@@ -96,7 +96,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = image("/usr/share/icons/gnome/32x32/places/debian-swirl.png"),
+mylauncher = awful.widget.launcher({ image = image("/usr/share/icons/gnome/16x16/places/debian-swirl.png"),
                                      menu = mymainmenu })
 -- }}}
 
