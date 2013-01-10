@@ -1,0 +1,4 @@
+* TODO [#B] install gitk
+* TODO [#B] install lua-mode
+* TODO [#B] find out why my .xsession is not processed correctly
+  I want setxkbmap fr bepo at startup
