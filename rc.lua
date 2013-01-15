@@ -104,10 +104,10 @@ mylauncher = awful.widget.launcher({ image = image("/usr/share/icons/gnome/16x16
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
 
--- Loading our custom module
-require("hobeika.widget.textloadavg")
+-- -- Loading our custom module
+-- require("hobeika.widget.textloadavg")
 
-mytextloadavg = hobeika.widget.textloadavg({ align = "right" })
+-- mytextloadavg = hobeika.widget.textloadavg({ align = "right" })
 -- mytextloadavg = widget({ type = "textbox", name = "mytextloadavg" })
 -- mytextloadavg.text = " " .. execute_command("cat /proc/loadavg | cut -c -9") .. " "
 
@@ -240,6 +240,8 @@ globalkeys = awful.util.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
+    -- Mod4 + t: terminal
+    awful.key({ modkey,           }, "t", function () awful.util.spawn(terminal) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
