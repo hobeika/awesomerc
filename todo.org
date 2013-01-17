@@ -1,4 +1,38 @@
-* TODO [#A] list needed features
+* TODO [#A] List session manager needs
+  - per user window manager settings
+  - maybe the ability to remember the last loaded environment per user
+    like kdm does
+  - ability to switch from a user session to another one, like kdm
+    does.
+  - ability to _easily_ see and select your window manager. Maybe with
+    a displayable menu? Make usage of dmenu calls?
+  - ability to halt the machine, from with the window manager without
+    typing the root password.
+* TODO [#A] [42%] choose a new session manager
+  $ aptitude search ~Px-display-manager
+  p   gdm                            - Gestionnaire d'écran de connexion de GNOME
+  p   gdm3                           - gestionnaire de sessions GDM
+  i A kdm                            - gestionnaire d'écran de connexion de KDE pour X11
+  p   lightdm                        - simple display manager
+  i   slim                           - desktop-independent graphical login manager for X11
+  p   wdm                            - Gestionnaire d'affichage WINGs, un remplaçant à xdm avec l'apparence de WindowMaker
+  i   xdm                            - X display manager
+
+  - [ ] xdm - Very light. Still I need to understand how to switch from
+    one user to another. I need to learn how to start a window manager
+    depending on the logged user.
+  - [ ] slim - Quite a good one. Some tweaking needs to be done to satisfy
+    my needs. I want users to be able to halt the machine. I want it
+    to load the right window manager regarding the user logged in.
+  - [X] kdm - This one is a hurdle as it starts some kde related process
+    which stays open while awesome is running.
+  - [X] gdm - This one may present the same problems as the previous one
+    (kde) and I want my setup as light as possible. I don't want to
+    leave kde to end up with gnome.
+  - [X] gdm3 - Same as above
+  - [ ] lightdm - not tested yet (debian testing)
+  - [ ] wdm - not tested yet (debian testing)
+* TODO [#B] list needed features
 ** DONE [#B] move client around tags
    CLOSED: [2013-01-10 jeu. 19:11]
 ** TODO [#B] tile client to left or right (the client takes half the surface of
@@ -18,11 +52,6 @@
     promptbox?), Do I want to type the name of my tag (or an
     acronym) or only bind each tag moveto action on a key for each
     of them.
-** TODO [#C] ps aux widget. I often open a terminal and type ps aux | grep
-    mybugged_program_name. It may be cool to have a promptbox like
-    widget to do this and display it on the desktop with maybe a
-    time-life of 10 seconds or have the ability to close the ps widget
-    with one key like Q and mimic less, more and most behavior.
 ** TODO [#B] do I want clients to go over the clock or not?
 ** TODO [#B] two clocks (UTC and CET) with different colors (maybe orange and
     standard grey respectively)
@@ -31,6 +60,11 @@
     Find a way to differentiate them
 ** TODO [#B] have a bind to display the name of the song currently playing in
     the launcher for instance.
+** TODO [#C] ps aux widget. I often open a terminal and type ps aux | grep
+    mybugged_program_name. It may be cool to have a promptbox like
+    widget to do this and display it on the desktop with maybe a
+    time-life of 10 seconds or have the ability to close the ps widget
+    with one key like Q and mimic less, more and most behavior.
 ** TODO [#C] have a way to display all my clients on the same tag but as
     - thumbs and filter the view them by typing letters found in the
       client names. Select on client among the displayed one maybe
