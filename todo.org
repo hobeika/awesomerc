@@ -1,3 +1,5 @@
+* TODO install magit
+p   magit    - Emacs interface for Git
 * TODO [#A] List session manager needs
   - per user window manager settings
   - maybe the ability to remember the last loaded environment per user
