@@ -1,9 +1,7 @@
-* TODO install magit
-p   magit    - Emacs interface for Git
 * TODO [#A] List session manager needs
   - per user window manager settings
-  - maybe the ability to remember the last loaded environment per user
-    like kdm does
+  - maybe have the ability to remember the last loaded environment per
+    user like kdm does
   - ability to switch from a user session to another one, like kdm
     does.
   - ability to _easily_ see and select your window manager. Maybe with
@@ -34,9 +32,9 @@ p   magit    - Emacs interface for Git
   - [X] gdm3 - Same as above
   - [ ] lightdm - not tested yet (debian testing)
   - [ ] wdm - not tested yet (debian testing)
-* TODO [#B] list needed features
+* TODO [#B] [8%] list needed features
 ** DONE [#B] move client around tags
-   CLOSED: [2013-01-10 jeu. 19:11]
+   CLOSED: [2013-01-22 mar. 18:07]
 ** TODO [#B] tile client to left or right (the client takes half the surface of
     the screen and is glued to the left or the right of the screen)
 ** TODO [#B] maximize a client and unmaximize the client to its previous size
@@ -80,3 +78,4 @@ p   magit    - Emacs interface for Git
       tag.
 * TODO [#B] find out why my .xsession is not processed correctly
   I want setxkbmap fr bepo at startup
+

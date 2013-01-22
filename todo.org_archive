@@ -18,6 +18,16 @@ Archived entries from file /home/vincent/files/projects/awesome/todo.org
   :ARCHIVE_CATEGORY: todo
   :ARCHIVE_TODO: DONE
   :END:
+* DONE [#B] install magit
+  CLOSED: [2013-01-22 mar. 17:54]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-22 mar. 18:05
+  :ARCHIVE_FILE: ~/files/projects/awesome/todo.org
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+p   magit    - Emacs interface for Git
+
 
 
 
