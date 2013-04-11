@@ -91,13 +91,14 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "Debian", debian.menu.Debian_menu.Debian, "/usr/share/icons/gnome/16x16/places/debian-swirl.png" },
+                                    { "Debian", debian.menu.Debian_menu.Debian, "/home/vincent/debian-swirl.png" },
                                     { "open terminal", terminal }
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = image("/usr/share/icons/gnome/16x16/places/debian-swirl.png"),
+mylauncher = awful.widget.launcher({ image = image("/home/vincent/debian-swirl.png"),
                                      menu = mymainmenu })
+
 -- }}}
 
 -- {{{ Wibox
