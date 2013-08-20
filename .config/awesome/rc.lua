@@ -249,6 +249,9 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "t", function () awful.util.spawn(terminal) end),
     awful.key({ modkey,           }, "i", function () awful.util.spawn(browser) end),
     awful.key({ "Shift" }, "XF86AudioMute", function () awful.util.spawn(locktool) end),
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 9%+", false) end),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 9%-", false) end),
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer sset Master toggle", false) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
