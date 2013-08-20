@@ -42,6 +42,7 @@ beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 -- this is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
 browser = "firefox"
+locktool = "xtrlock"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 browser = "firefox"
@@ -247,6 +248,7 @@ globalkeys = awful.util.table.join(
     -- Mod4 + t: terminal
     awful.key({ modkey,           }, "t", function () awful.util.spawn(terminal) end),
     awful.key({ modkey,           }, "i", function () awful.util.spawn(browser) end),
+    awful.key({ modkey, "Shift"   }, "l", function () awful.util.spawn(locktool) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
