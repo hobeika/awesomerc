@@ -1,0 +1,7 @@
+# disable beeper
+xset b off
+# disable XOFF display freeze when hitting Ctrl-S
+# stty -ixon
+# select a random wallpaper at startup
+# awsetbg -a -r files/docs/wallpapers/
+xset r rate 150 50
