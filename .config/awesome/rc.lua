@@ -248,7 +248,7 @@ globalkeys = awful.util.table.join(
     -- Mod4 + t: terminal
     awful.key({ modkey,           }, "t", function () awful.util.spawn(terminal) end),
     awful.key({ modkey,           }, "i", function () awful.util.spawn(browser) end),
-    awful.key({ modkey, "Shift"   }, "l", function () awful.util.spawn(locktool) end),
+    awful.key({ "Shift" }, "XF86AudioMute", function () awful.util.spawn(locktool) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
