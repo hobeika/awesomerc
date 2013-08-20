@@ -42,10 +42,10 @@
 ** TODO [#B] have a 2D layout:
     | 1 | 2 | 3 |
     | 4 | 5 | 6 |
-   - This can be mimicked by have a mod4 + down and mod4 + up which
-     move to 3 tags right and 3 tags left.
+   - This can be mimicked by having a mod4 + down and mod4 + up which
+     moves to 3 tags right and 3 tags left.
 ** TODO [#B] have named tag associated to context: dev, web, chat, mail,
-    compilation, sandbox
+    compilation, sandbox, all
     | dev  | compilation | web  |
     | mail | sandbox     | chat |
 ** TODO [#B] have a goto named tag: goto dev (could this behave like the
@@ -76,6 +76,7 @@
       whenever I strike key. One problem remain: create thumbs. or
       maybe I could simply tile all the client on that specific map
       tag.
-* TODO [#B] find out why my .xsession is not processed correctly
+* DONE [#B] find out why my .xsession is not processed correctly
+  CLOSED: [2013-08-20 Tue 14:05]
   I want setxkbmap fr bepo at startup
-
+  I renamed .xsession to .xsessionrc
