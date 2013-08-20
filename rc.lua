@@ -179,9 +179,12 @@ for s = 1, screen.count() do
                                               return awful.widget.tasklist.label.currenttags(c, s)
                                           end, mytasklist.buttons)
 
+
+    mystatusbar = awful.wibox({ position = "bottom", screen = s, ontop = false, width = 1, height = 12 })
     -- Create the wibox
     mywibox[s] = awful.wibox({ position = "top", screen = s })
     -- Add widgets to the wibox - order matters
+
     mywibox[s].widgets = {
         {
             mylauncher,
