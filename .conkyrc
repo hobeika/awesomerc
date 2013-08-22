@@ -32,13 +32,13 @@ show_graph_range no
 format_human_readable yes
 
 color1 FFFFFF
-color2 FFFFFF
+color2 FF8888
 color3 FFFFFF
 
 # mpd_host 127.0.0.1
 
 TEXT
-${color1}${exec distccmon-text | head -1}${color} \
+${color2}${exec sed -e "s@.*/home/\(.*\)/.ccache/.*.tmp\.\(.*\)@\1 \2@" /var/log/distccd.log | tail -n 1}${color} \
 ${color1}Activity on /dev/sda:${color} ${diskiograph 5,50 000000 ff0000 -t} \
 ${color1}Load: ${loadavg}${color} ${color1}|${color} \
 ${color1}RAM:${color} ${memperc}% ${membar 2,50}
