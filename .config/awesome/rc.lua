@@ -254,6 +254,7 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer sset Master toggle", false) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
+    awful.key({ modkey, "Shift"   }, "b", function awful.util.spawn("urxvt -e quit.sh") end),
 
     awful.key({ modkey,           }, "j",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "v",     function () awful.tag.incmwfact(-0.05)    end),
