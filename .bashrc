@@ -187,4 +187,4 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 # work env
-source .bashrc_work
+source ${HOME}/.bashrc_work
