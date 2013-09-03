@@ -49,7 +49,8 @@ xlogin*failFace:	Helvetica-14:bold
 ! !xlogin*foreground: darkgreen
 ! xlogin*greetColor: Blue3
 ! xlogin*failColor: red
-*Foreground: white
+xlogin*failColor: red
+*Foreground: #535d6c
 *Background: black
 xlogin*borderWidth: 0
 xlogin*frameWidth: 0
