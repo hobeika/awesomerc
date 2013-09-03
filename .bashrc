@@ -94,11 +94,11 @@ alias emacs='emacs -nw'
 alias l='ls -la'
 alias rmtmp='rm -f *~ \#*'
 alias ctest='PATH=/usr/lib/ccache:$PATH ctest'
-alias makej='make -j 18 $*'
-alias maket='ctest -j 18 $*'
+alias makej='make -j 10 $*'
+alias maket='ctest -j 10 $*'
 alias makexp='maket -D Experimental'
 alias makexpx='maket -D Experimental ; xeyes'
-alias makejx='make -j 18 ; xeyes'
+alias makejx='make -j 10 ; xeyes'
 alias makex='make ; xeyes'
 alias gdbrun='/home/vincent/files/bin/utils/gdbrun'
 
@@ -141,7 +141,7 @@ DEBFULLNAME="Vincent Hobeïka"
 export DEBEMAIL DEBFULLNAME
 alias dmake='PATH=/usr/lib/distcc:$PATH:/home/vincent/files/bin cmake -DCMAKE_CXX_COMPILER:FILEPATH=/usr/lib/distcc/x86_64-linux-gnu-g++-4.4 -DCMAKE_C_COMPILER:FILEPATH=/usr/lib/distcc/x86_64-linux-gnu-gcc-4.4'
 alias cachemake='PATH=/usr/lib/ccache:$PATH cmake'
-alias dcachemake='export CCACHE_PREFIX="distcc" ; cachemake -DCMAKE_CXX_COMPILER:FILEPATH=/usr/lib/ccache/x86_64-linux-gnu-g++-4.7 -DCMAKE_C_COMPILER:FILEPATH=/usr/lib/ccache/x86_64-linux-gnu-gcc-4.7'
+alias dcachemake='export CCACHE_PREFIX="distcc" ; cachemake -DCMAKE_CXX_COMPILER:FILEPATH=/usr/lib/ccache/x86_64-linux-gnu-g++-4.4 -DCMAKE_C_COMPILER:FILEPATH=/usr/lib/ccache/x86_64-linux-gnu-gcc-4.4'
 
 nnano ()
 {
