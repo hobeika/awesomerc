@@ -37,7 +37,8 @@ end
 
 -- {{{ variable definitions
 -- themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+-- beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init(awful.util.getdir("config") .. "/themes/hal/theme.lua")
 
 -- this is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -248,13 +249,10 @@ globalkeys = awful.util.table.join(
     -- Mod4 + t: terminal
     awful.key({ modkey,           }, "t", function () awful.util.spawn(terminal) end),
     awful.key({ modkey,           }, "i", function () awful.util.spawn(browser) end),
-    awful.key({ "Shift" }, "XF86AudioMute", function () awful.util.spawn(locktool) end),
-    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 9%+", false) end),
-    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 9%-", false) end),
-    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer sset Master toggle", false) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
-    awful.key({ modkey, "Shift"   }, "b", function awful.util.spawn("urxvt -e quit.sh") end),
+
+--    awful.key({ modkey, "Shift"   }, "b", function awful.util.spawn("urxvt -e quit.sh", false) end),
 
     awful.key({ modkey,           }, "j",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "v",     function () awful.tag.incmwfact(-0.05)    end),
@@ -264,6 +262,11 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "j",     function () awful.tag.incncol(-1)         end),
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
+
+    awful.key({ "Shift" }, "XF86AudioMute", function () awful.util.spawn(locktool) end),
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 9%+", false) end),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 9%-", false) end),
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer sset Master toggle", false) end),
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 --    awful.key({ modkey, "Shift"   }, "k", function () awful.util.spawn("setxkbmap fr bepo") end),
