@@ -4,7 +4,11 @@ xset b off
 # stty -ixon
 # select a random wallpaper at startup
 # awsetbg -a -r files/docs/wallpapers/
-xset r rate 370 79
+xset r rate 370 70
 conky
 gpg-agent --daemon --enable-ssh-support \
                    --write-env-file "${HOME}/.gpg-agent-info"
+export WALLPAPERS="${HOME}/.config/awesome/wallpapers/"
+export ASSWORD_DB="${HOME}/orgd/config/credentials/.assword/db"
+export ASSWORD_KEYID=2965A78F
+export ASSWORD_XPASTE=xclip
