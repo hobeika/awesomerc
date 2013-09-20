@@ -6,4 +6,5 @@ OFFLINEIMAP_CONF_FILE=${HOME}/orgd/config/credentials/offlineimap.conf
 if [ -e "${OFFLINEIMAP_CONF_FILE}" ]; then
     # Get new mails.
     offlineimap -c "${OFFLINEIMAP_CONF_FILE}"
+    notmuch new
 fi
