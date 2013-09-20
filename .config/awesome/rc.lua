@@ -93,7 +93,7 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "Debian", debian.menu.Debian_menu.Debian, "/home/vincent/debian-swirl.png" },
+                                    { "Debian", debian.menu.Debian_menu.Debian, awful.util.getdir("config") .. "/debian-swirl.png" },
                                     { "open terminal", terminal }
                                   }
                         })
