@@ -30,3 +30,7 @@ thread from search."
   (notmuch-show-archive-message)
   (unless (notmuch-show-previous-open-message)
     (notmuch-show-previous-thread t)))
+
+
+(eval-after-load 'notmuch-show
+  '(define-key notmuch-show-mode-map (kbd "p") 'notmuch-show-archive-message-then-previous-or-previous-thread))
