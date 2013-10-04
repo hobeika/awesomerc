@@ -47,6 +47,8 @@ locktool = "xtrlock"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 browser = "firefox"
+local os = os
+local wallpapers_path = os.getenv("WALLPAPERS")
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -249,6 +251,8 @@ globalkeys = awful.util.table.join(
     -- Mod4 + t: terminal
     awful.key({ modkey,           }, "t", function () awful.util.spawn(terminal) end),
     awful.key({ modkey,           }, "i", function () awful.util.spawn(browser) end),
+    -- Change my background
+    awful.key({ modkey,           }, "b", function () awful.util.spawn("awsetbg -a -r " .. wallpapers_path, false) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     --    awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
@@ -367,6 +371,9 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
+    { rule = { name = "Downloads" },
+      properties = { floating = true,
+                     } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
