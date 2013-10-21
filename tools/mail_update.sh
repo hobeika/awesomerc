@@ -19,6 +19,7 @@ if [ -e "${OFFLINEIMAP_CONF_FILE}" ]; then
     # svn mails
     ${NOTMUCH_BIN} tag +svn -- tag:new and from:svnmailer@cosmo-platform.org and not "/csmSDK/trunk/csmCore"
     ${NOTMUCH_BIN} tag +svn -- tag:new and from:svnmailer@cosmo-platform.org and not "in /csmSDK/trunk: csmCore/"
+    ${NOTMUCH_BIN} tag -unread -- tag:svn and "Author: vhobeika"
     # calendar invitations and replies
     ${NOTMUCH_BIN} tag +calendar -inbox -- tag:new and "Invitation from Google Calendar"
     ${NOTMUCH_BIN} tag -unread -- tag:trac and tag:unread and "Description changed by vhobeika"
