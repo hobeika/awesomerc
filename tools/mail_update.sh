@@ -21,6 +21,9 @@ if [ -e "${OFFLINEIMAP_CONF_FILE}" ]; then
     ${NOTMUCH_BIN} tag +svn -- tag:new and from:svnmailer@cosmo-platform.org and not "in /csmSDK/trunk: csmCore/"
     # calendar invitations and replies
     ${NOTMUCH_BIN} tag +calendar -inbox -- tag:new and "Invitation from Google Calendar"
+    ${NOTMUCH_BIN} tag -unread -- tag:trac and tag:unread and "Description changed by vhobeika"
+    ${NOTMUCH_BIN} tag -unread -- tag:trac and tag:unread and "Changes (by vhobeika):"
+
     # finally, retag all "new" messages "inbox" and "unread"
     ${NOTMUCH_BIN} tag +inbox +unread -new -- tag:new
     ${NOTMUCH_BIN} tag -unread -- tag:svn
