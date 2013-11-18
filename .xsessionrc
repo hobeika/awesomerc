@@ -11,4 +11,7 @@ gpg-agent --daemon --enable-ssh-support \
 export WALLPAPERS="${HOME}/.config/awesome/wallpapers/"
 export ASSWORD_DB="${HOME}/orgd/config/credentials/.assword/db"
 export ASSWORD_KEYID=2965A78F
-# export ASSWORD_XPASTE=xclip
+export PATH=${HOME}/bin:${PATH}
+
+# Enabling numlock on startup
+numlockx on
