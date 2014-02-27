@@ -4,7 +4,7 @@ xset b off
 # stty -ixon
 # select a random wallpaper at startup
 # awsetbg -a -r files/docs/wallpapers/
-xset r rate 370 70
+xset r rate 300 80
 conky
 gpg-agent --daemon --enable-ssh-support \
                    --write-env-file "${HOME}/.gpg-agent-info"
@@ -15,3 +15,10 @@ export PATH=${HOME}/bin:${PATH}
 
 # Enabling numlock on startup
 numlockx on
+
+# Forcing bépo layout to avoid the assword bug (which types my
+# passwords in qwerty)
+setxkbmap fr bepo
+
+# workrave
+workrave &
