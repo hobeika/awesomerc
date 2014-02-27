@@ -101,6 +101,7 @@ alias makexpx='maket -D Experimental ; xeyes'
 alias makejx='make -j 10 ; xeyes'
 alias makex='make ; xeyes'
 alias gdbrun='/home/vincent/files/bin/utils/gdbrun'
+alias telnet='rlwrap telnet'
 
 #alias la='ls -A'
 #alias l='ls -CF'
@@ -124,7 +125,8 @@ fi
 # Compilation and linking flags
 export LDFLAGS="-Wl,--fatal-warnings -Wl,--no-undefined"
 export CFLAGS="-Wall"
-export CXXFLAGS="-Wall -frounding-math"
+export CXXFLAGS="-Wall"
+# export CXXFLAGS="-Wall -frounding-math" #CGal stuff
 
 export PAGER=most
 export EDITOR="emacs -nw"
