@@ -144,6 +144,7 @@ export DEBEMAIL DEBFULLNAME
 alias dmake='PATH=/usr/lib/distcc:$PATH:/home/vincent/files/bin cmake -DCMAKE_CXX_COMPILER:FILEPATH=/usr/lib/distcc/x86_64-linux-gnu-g++-4.4 -DCMAKE_C_COMPILER:FILEPATH=/usr/lib/distcc/x86_64-linux-gnu-gcc-4.4'
 alias cachemake='PATH=/usr/lib/ccache:$PATH cmake'
 alias dcachemake='export CCACHE_PREFIX="distcc" ; cachemake -DCMAKE_CXX_COMPILER:FILEPATH=/usr/lib/ccache/x86_64-linux-gnu-g++-4.4 -DCMAKE_C_COMPILER:FILEPATH=/usr/lib/ccache/x86_64-linux-gnu-gcc-4.4'
+export PYTHONPATH='/home/vincent/files/projects/TRHaelPPyerCthon'
 
 nnano ()
 {
@@ -178,6 +179,7 @@ nnano ()
 # [ "$(cut -d. -f1 /proc/loadavg)" -gt 2 ] && return
 alias sync_key_to_pc='/home/vincent/key/scripts/sync_key_to_pc.sh'
 alias sync_pc_to_key='/home/vincent/key/scripts/sync_pc_to_key.sh'
+alias isswallpaper='livestreamer http://www.ustream.tv/channel/iss-hdev-payload best -O | mplayer -  -rootwin -vf scale=1920:1200 -noconsolecontrols'
 
 # gpg-agent conf.
 if [ -f "${HOME}/.gpg-agent-info" ]; then
