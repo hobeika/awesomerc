@@ -40,3 +40,11 @@ URxvt.keysym.C-End:  \033[8^
 # !URxvt.keysym.End              \033[F
 # URxvt.keysym.Home      \033[1~
 # URxvt.keysym.End       \033[4~
+
+
+# You can use keyboard shortcuts, too:
+           
+URxvt.keysym.C-M-g: command:\033]710;suxuseuro\007\033]711;suxuseuro\007
+URxvt.keysym.C-M-f: command:\033]710;9x15bold\007\033]711;9x15bold\007
+           
+# rxvt-unicode will automatically re-apply these fonts to the output so far.
