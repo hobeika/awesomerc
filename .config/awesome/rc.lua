@@ -381,6 +381,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { name = "xeyes" },
       properties = { floating = true } },
+    { rule = { name = "gitk" },
+      properties = { floating = true } },
     { rule = { name = "Ampache XSPF Player - Iceweasel" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
