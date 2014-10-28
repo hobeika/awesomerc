@@ -34,11 +34,27 @@ format_human_readable yes
 color1 FFFFFF
 color2 FF8888
 color3 FFFFFF
+# red
+color4 FF0006
+# green
+color5 06FF06
+# blue
+color6 06AFFF
+# grey
+color7 A0A0A0
 
 # mpd_host 127.0.0.1
 
 TEXT
-${color2}${exec sed -e "s@.*/home/\(.*\)/.ccache/.*.tmp\.\(.*\)@\1 \2@" /var/log/distccd.log | tail -n 1}${color} \
-${color1}Activity on /dev/sda:${color} ${diskiograph 5,50 000000 ff0000 -t} \
-${color1}Load: ${loadavg}${color} ${color1}|${color} \
-${color1}RAM:${color} ${memperc}% ${membar 2,50}
+${color7}${exec sed -e "s@.*/home/\(.*\)/.ccache/.*.tmp\.\(.*\)@\1 \2@" /var/log/distccd.log | tail -n 1}${color} \
+${color4}${exec cat /proc/sys/kernel/random/entropy_avail} ent${color} \
+${color6}${exec nvidia-settings -q GPUCoreTemp -t} °C${color} \
+${diskiograph 5,50 000000 ff0000 -t} \
+${loadavg}${color} ${color1}|${color} \
+${memperc}% ${membar 5,20} \
+$cpu% ${cpubar 5,20} \
+$running_processes/$processes
+
+# ${color6}${exec nvidia-settings -q GPU2DClockFreqs -t} MHz${color} \
+# ${color6}${exec nvidia-settings -q GPU3DClockFreqs -t} MHz${color} \
+# ${color6}${exec nvidia-settings -q GPUCurrentProcessorClockFreqs -t} MHz${color} \

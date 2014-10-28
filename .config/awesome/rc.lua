@@ -216,6 +216,10 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+    -- bind PrintScrn to capture a screen
+    awful.key({}, "Print", function() awful.util.spawn("capscr.sh",false) end),
+    awful.key({ modkey, "Control" }, "s", function() awful.util.spawn("capscr.sh",false) end),
+    -- Tag moves
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
