@@ -29,12 +29,12 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # source bash config
-source ${HOME}/orgd/projects/cfg/mybashrc
+source ${HOME}/orgd/projects/cfg/mybashrc.sh
 
 # source private config for bash
 source ${HOME}/orgd/config/private/mybashrcprivate.sh
 
 # work env
 if [ `hostname` = "hal" ]; then
-    source ${HOME}/.bashrc_work
+    source ${HOME}/.bashrc_work.sh
 fi
