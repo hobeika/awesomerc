@@ -1,4 +1,3 @@
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
@@ -41,6 +40,8 @@ xterm*|rxvt*)
     ;;
 esac
 
+echo "loading aliases"
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -79,12 +80,19 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+echo "loading bash_completion"
+starttime=`date +%s`
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+stoptime=`date +%s`
+echo "$(($stoptime-$starttime)) s"
+
+echo "loading other aliases and GPG agent and exports"
+
 # alias bepo='sudo loadkeys /usr/share/keymaps/i386/dvorak/dvorak-fr-bepo.kmap.gz'
 alias bepo='sudo loadkeys ~/files/kmaps/mybepo.kmap.gz'
 export QUILT_PATCHES=debian/patches
