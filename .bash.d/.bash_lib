@@ -1,0 +1,31 @@
+nnano ()
+{
+    argv=();
+    for file in "$@";
+    do
+        if echo "$file" | /bin/grep -q ':[0-9]\+$'; then
+            l="$(echo $file | cut -d: -f2)";
+            f="$(echo $file | cut -d: -f1)";
+            if [ -e "$f" ]; then
+                argv+=("+$l");
+                file="$f";
+            fi;
+        else
+            if echo "$file" | /bin/grep -q '~'; then
+                f="$(echo $file | cut -d~ -f1)";
+                p="$(echo $file | cut -d~ -f2)";
+                if [ -e "$f" ]; then
+                    l=$(/bin/grep -n "$p" "$f" | cut -d: -f1 | head -n 1);
+                    if [ ${#l} != 0 ]; then
+                        argv+=("+$l");
+                    fi;
+                    file="$f";
+                fi;
+            fi;
+        fi;
+        argv+=("$file");
+    done;
+    nano "${argv[@]}"
+}
+
+# [ "$(cut -d. -f1 /proc/loadavg)" -gt 2 ] && return

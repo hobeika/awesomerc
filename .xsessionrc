@@ -15,8 +15,17 @@ export PATH=${HOME}/bin:${PATH}
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
+# GPG agent
+if [ -f "${HOME}/.gpg-agent-info" ]; then
+    . "${HOME}/.gpg-agent-info"
+    export GPG_AGENT_INFO
+    export SSH_AUTH_SOCK
+fi
+GPG_TTY=$(tty)
+export GPG_TTY
+
 # Enabling numlock on startup
-numlockx on
+# numlockx on
 
 # Forcing bépo layout to avoid the assword bug (which types my
 # passwords in qwerty)

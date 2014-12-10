@@ -257,6 +257,9 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "i", function () awful.util.spawn(browser) end),
     -- Change my background
     awful.key({ modkey,           }, "b", function () awful.util.spawn("awsetbg -a -r " .. wallpapers_path, false) end),
+    -- Describe my background
+    awful.key({ modkey, "Shift" }, "b", function() awful.util.spawn("desc_wallpaper.sh",false) end),
+    -- Restart awesome
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     --    awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
@@ -270,7 +273,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "j",     function () awful.tag.incncol(-1)         end),
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
-    awful.key({ modkey,           }, "p", function () awful.util.spawn("assword gui", false) end),
+    awful.key({ modkey,           }, "p", function () awful.util.spawn("asswordgui.sh", true) end),
 
     -- awful.key({ "Shift" }, "XF86AudioMute", function () awful.util.spawn(locktool) end),
     awful.key({ modkey, }, "F12", function () awful.util.spawn(locktool) end),

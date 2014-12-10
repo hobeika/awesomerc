@@ -28,18 +28,15 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# is my encfs mounted?
-if [ -f ${HOME}/orgd/projects/cfg/mybashrc.sh ]; then
+if [ -f ${HOME}/.bash.d/mybashrc.sh ]; then
     # source bash config
-    source ${HOME}/orgd/projects/cfg/mybashrc.sh
+    source ${HOME}/.bash.d/mybashrc.sh
 
     # source private config for bash
-    source ${HOME}/orgd/config/private/mybashrcprivate.sh
+    #source ${HOME}/orgd/config/private/mybashrcprivate.sh
 fi
 
 # work env
 if [ `hostname` = "hal" ]; then
     source ${HOME}/.bashrc_work.sh
 fi
-
-alias dtail='dmesg | tail'

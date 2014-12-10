@@ -1,0 +1,30 @@
+# Compilation and linking flags
+export PATH=/usr/lib/ccache:$PATH
+export LDFLAGS="-Wl,--fatal-warnings -Wl,--no-undefined"
+export CFLAGS="-Wall"
+export CXXFLAGS="-Wall"
+export DISTCC_HOSTS="127.0.0.1 10.175.9.103 10.175.9.105 10.175.9.119 10.175.9.115 10.175.9.113"
+
+# Debian
+export QUILT_PATCHES=debian/patches
+DEBEMAIL="vincent.hobeika@gmail.com"
+DEBFULLNAME="Vincent Hobeïka"
+export DEBEMAIL DEBFULLNAME
+
+# Python
+export PYTHONPATH='/home/vincent/files/projects/TRHaelPPyerCthon'
+
+# Read and Edit
+export PAGER=most
+export EDITOR="emacs -nw"
+export SVN_EDITOR="emacs -nw"
+
+# # GPG agent
+# # gpg-agent conf.
+# if [ -f "${HOME}/.gpg-agent-info" ]; then
+#     . "${HOME}/.gpg-agent-info"
+#     export GPG_AGENT_INFO
+#     export SSH_AUTH_SOCK
+# fi
+# GPG_TTY=$(tty)
+# export GPG_TTY
