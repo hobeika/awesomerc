@@ -7,7 +7,8 @@ theme = {}
 theme.font          = "sans 8"
 
 theme.bg_normal     = "#151724"
-theme.bg_focus      = "#ff3333"
+-- theme.bg_focus      = "#9d053c" -- "#ff3333"
+theme.bg_focus      = "#" .. os.getenv("BGCOLOR")
 theme.bg_urgent     = "#aa0000"
 theme.bg_minimize   = "#444444"
 

@@ -12,8 +12,7 @@ export WALLPAPERS="${HOME}/.config/awesome/wallpapers/"
 export ASSWORD_DB="${HOME}/orgd/config/credentials/.assword/db"
 export ASSWORD_KEYID=2965A78F
 export PATH=${HOME}/bin:${PATH}
-export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-export LESS=' -R '
+export BGCOLOR=`printf '%06x\n' $(($RANDOM*512))`
 
 # GPG agent
 if [ -f "${HOME}/.gpg-agent-info" ]; then
