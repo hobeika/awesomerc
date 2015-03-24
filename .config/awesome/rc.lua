@@ -6,6 +6,9 @@ require("awful.rules")
 require("beautiful")
 -- Notification library
 require("naughty")
+naughty.config.defaults.font = "DejaVu Sans Mono 8"
+-- naughty.config.defaults.font = "DejaVu Sans Mono"
+-- naughty.config.defaults.font = awesome.font
 
 -- Load Debian menu entries
 require("debian.menu")
@@ -259,6 +262,18 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "b", function () awful.util.spawn("awsetbg -a -r " .. wallpapers_path, false) end),
     -- Describe my background
     awful.key({ modkey, "Shift" }, "b", function() awful.util.spawn("desc_wallpaper.sh",false) end),
+    -- Clear notification windows
+    awful.key({ modkey,           }, "c", function() local screen = 1 
+                for p, pos in pairs(naughty.notifications[screen]) do
+                    for i, n in pairs(naughty.notifications[screen][p]) do
+                        naughty.destroy(n)
+                        return true
+                    end
+                end
+                naughty.notify({ text = "no notification to remove",
+                               timeout = 0.5 })
+                return false
+            end),
     -- Restart awesome
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     --    awful.key({ modkey, "Shift"   }, "q", awesome.quit),
