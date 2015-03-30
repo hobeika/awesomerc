@@ -259,6 +259,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "i", function () awful.util.spawn(browser) end),
     -- Change my background
     awful.key({ modkey,           }, "b", function () awful.util.spawn("awsetbg -a -r " .. wallpapers_path, false) end),
+    -- Set a random favorite wallpaper as wallpaer
+    awful.key({ modkey, "Shift"   }, "w", function () awful.util.spawn("awsetbg -a -r " .. wallpapers_path .. "/fav/", false) end),
     -- Describe my background
     awful.key({ modkey, "Shift" }, "b", function() awful.util.spawn("desc_wallpaper.sh",false) end),
     -- Add current wallpaper as a favorite
