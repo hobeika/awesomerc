@@ -398,6 +398,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
+    { rule = { name = "ImageMagick" },
+      properties = { floating = true } },
     { rule = { name = "Downloads" },
       properties = { floating = true } },
     { rule = { name = "Téléchargements" },
