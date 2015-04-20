@@ -267,8 +267,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift" }, "v", function() awful.util.spawn("view_wallpaper.sh",false) end),
     -- Add current wallpaper as a favorite
     awful.key({ modkey, "Shift" }, "f", function() awful.util.spawn("fav_wallpaper.sh",false) end),
+    -- Max current background
+    awful.key({ modkey, "Shift" }, "m", function() awful.util.spawn("max_wallpaper.sh",false) end),
     -- Clear notification windows
-    awful.key({ modkey,           }, "c", function() local screen = 1 
+    awful.key({ modkey,           }, "c", function() local screen = 1
                 for p, pos in pairs(naughty.notifications[screen]) do
                     for i, n in pairs(naughty.notifications[screen][p]) do
                         naughty.destroy(n)
