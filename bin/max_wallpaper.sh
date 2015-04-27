@@ -6,7 +6,9 @@ res=$?
 if [ ${res} -eq 0 ];then
     # If it is filled, we max it
     feh --bg-max "${file% }"
+    notify-send "Wallpaper setting" "Maxed"
 else
     # If it is maxed, we fill it
     feh --bg-fill "${file% }"
+    notify-send "Wallpaper setting" "Filled"
 fi
