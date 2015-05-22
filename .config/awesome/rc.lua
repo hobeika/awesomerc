@@ -277,7 +277,7 @@ globalkeys = awful.util.table.join(
                         return true
                     end
                 end
-                naughty.notify({ text = "no notification to remove",
+                naughty.notify({ text = "No notifications to remove",
                                timeout = 0.5 })
                 return false
             end),
